@@ -2,8 +2,6 @@
 
 이메일: asciya@naver.com
 
-연락처: 010-5222-4211
-
 
 < Information >
 - 광고 서비스 QA (2020.10 ~ )
