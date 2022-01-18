@@ -1,4 +1,8 @@
-# Summary
+# Table of contents
 
-* [Introduction](README.md)
+* [Profile](README.md)
 
+## Automation
+
+* [Appium SetUp (On MacOS)](automation/appium-setup-on-macos.md)
+* [Appium SetUp (On Windows)](automation/appium-setup-on-windows.md)
