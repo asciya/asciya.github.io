@@ -1,9 +1,9 @@
-# Profile
+# Introduction
 
-이메일: asciya@naver.com
+E-mail: asciya@gmail.com
 
 
 < Information >
-- 광고 서비스 QA (2020.10 ~ )
-- 네트워크 필터링 서비스 QA (2012.02 ~ 2020.09)
-- CCTV 소프트웨어 TE (2009.12 ~ 2012.01)
+- Ad Tech QA (2020.10 ~ )
+- Packet Filtering SW, Network Encryption / Decryption QA (2012.02 ~ 2020.09)
+- CCTV SW TE (2009.12 ~ 2012.01)
