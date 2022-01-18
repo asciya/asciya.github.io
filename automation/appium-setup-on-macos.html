@@ -1,0 +1,383 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Appium SetUp (On MacOS) · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="appium-setup-on-windows.html" />
+    
+    
+    <link rel="prev" href="../" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Profile
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Automation</li>
+        
+        
+    
+        <li class="chapter active" data-level="2.1" data-path="appium-setup-on-macos.html">
+            
+                <a href="appium-setup-on-macos.html">
+            
+                    
+                    Appium SetUp (On MacOS)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="appium-setup-on-windows.html">
+            
+                <a href="appium-setup-on-windows.html">
+            
+                    
+                    Appium SetUp (On Windows)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Appium SetUp (On MacOS)</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="appium-setup-on-macos">Appium SetUp (On MacOS)</h1>
+<h2 id="&#xD130;&#xBBF8;&#xB110;&#xC744;-bash&#xB85C;-&#xBCC0;&#xACBD;">&#xD130;&#xBBF8;&#xB110;&#xC744; Bash&#xB85C; &#xBCC0;&#xACBD;</h2>
+<blockquote>
+<pre><code>$ chsh -s /bin/bash
+</code></pre></blockquote>
+<p>&#xC6D0;&#xC0C1;&#xBCF5;&#xAD6C; &#xD544;&#xC694; &#xC2DC;,</p>
+<blockquote>
+<pre><code>$ chsh -s /bin/zsh
+</code></pre></blockquote>
+<h2 id="homebrew-&#xC124;&#xCE58;">Homebrew &#xC124;&#xCE58;</h2>
+<pre><code>$ /bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&quot;
+</code></pre><p>&#xBE44;&#xBC00;&#xBC88;&#xD638; &#xC785;&#xB825; &gt; &#xC124;&#xCE58; &#xC644;&#xB8CC; &#xD6C4;, &#xD130;&#xBBF8;&#xB110; &#xC7AC;&#xC2E4;&#xD589;</p>
+<h2 id="java-jdk-&#xC124;&#xCE58;">Java JDK &#xC124;&#xCE58;</h2>
+<p>cask &#xC124;&#xCE58;</p>
+<blockquote>
+<pre><code>$ brew install cask
+</code></pre></blockquote>
+<p>acceptopenjdk8&#xC744; &#xC124;&#xCE58;</p>
+<blockquote>
+<pre><code>$ brew install --cask adoptopenjdk/openjdk/adoptopenjdk8
+</code></pre></blockquote>
+<p>JAVA_HOME &#xC124;&#xC815;</p>
+<blockquote>
+<pre><code>$ nano .bash_profile
+</code></pre><blockquote>
+<pre><code> export JAVA_HOME=$(/usr/libexec/java_home)
+</code></pre></blockquote>
+<pre><code>$ source ~/.bash_profile
+$ echo $JAVA_HOME
+/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home
+</code></pre></blockquote>
+<h2 id="android-studio-&#xC124;&#xCE58;">Android Studio &#xC124;&#xCE58;</h2>
+<ol>
+<li>&#xC548;&#xB4DC;&#xB85C;&#xC774;&#xB4DC; &#xAC1C;&#xBC1C;&#xC790; &#xC0AC;&#xC774;&#xD2B8;(<a href="https://developer.android.com/studio" target="_blank">https://developer.android.com/studio</a>) &#xC811;&#xC18D;</li>
+<li>Mac &#xBC84;&#xC804; &#xC548;&#xB4DC;&#xB85C;&#xC774;&#xB4DC; &#xC2A4;&#xD29C;&#xB514;&#xC624; &#xB2E4;&#xC6B4;&#xB85C;&#xB4DC;</li>
+<li>&#xB2E4;&#xC6B4;&#xB85C;&#xB4DC; &#xC57D;&#xAD00; &#xB3D9;&#xC758;</li>
+<li>&#xD30C;&#xC77C; &#xB2E4;&#xC6B4;&#xB85C;&#xB4DC; &#xD6C4; &#xC2E4;&#xD589; &amp; &#xC124;&#xCE58;</li>
+<li>&#xD504;&#xB85C;&#xADF8;&#xB7A8; &#xC2E4;&#xD589; &gt; &#xC548;&#xB4DC;&#xB85C;&#xC774;&#xB4DC; &#xC2A4;&#xD29C;&#xB514;&#xC624; &#xC124;&#xC815;</li>
+</ol>
+<p>ANDROID_HOME &#xC124;&#xC815;</p>
+<blockquote>
+<pre><code>$ nano .bash_profile
+</code></pre><blockquote>
+<pre><code>export ANDROID_HOME=/Users/$USER/Library/Android/sdk/
+export PATH=$PATH:$ANDROID_HOME
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+</code></pre></blockquote>
+<pre><code>$ source ~/.bash_profile
+$ echo $ANDROID_HOME
+/Users/$USER/Library/Android/sdk/
+</code></pre></blockquote>
+<h2 id="xcode-&#xC124;&#xCE58;">Xcode &#xC124;&#xCE58;</h2>
+<ol>
+<li><a href="http://developer.apple.com/download/more" target="_blank">http://developer.apple.com/download/more</a> &#xC811;&#xC18D; (Apple ID &#xB85C;&#xADF8;&#xC778;)</li>
+<li>&#xB2E4;&#xC6B4;&#xBC1B;&#xC744; Xcode &#xBC84;&#xC804; &#xC555;&#xCD95;&#xD30C;&#xC77C; &#xB2E4;&#xC6B4;&#xB85C;&#xB4DC;</li>
+<li>&#xC555;&#xCD95; &#xD30C;&#xC77C; &#xC2E4;&#xD589; &#xD6C4; &#xC555;&#xCD95; &#xD574;&#xC81C;&#xB41C; Xcode &#xD30C;&#xC77C;&#xC744; &#xC751;&#xC6A9;&#xD504;&#xB85C;&#xADF8;&#xB7A8; &#xD3F4;&#xB354;&#xB85C; &#xBCF5;&#xC0AC; &amp; &#xC2E4;&#xD589;</li>
+<li>Xcode &#xC2E4;&#xD589; &gt; Preferences &gt; Locations &gt; Command Line Tools &#xC120;&#xD0DD;</li>
+</ol>
+<h2 id="xcode-select-&#xC124;&#xCE58;">xcode-select &#xC124;&#xCE58;</h2>
+<pre><code>$ xcode-select -p
+/Applications/Xcode.app/Contents/Developer
+</code></pre><p>&#xC5C6;&#xB2E4;&#xBA74;</p>
+<pre><code>$ xcode-select --install
+</code></pre><p>&#xC124;&#xCE58; &#xD6C4;, &#xB77C;&#xC774;&#xC120;&#xC2A4; &#xC218;&#xB77D;</p>
+<pre><code>$ sudo xcodebuild -license accept
+</code></pre><h2 id="nodejs-&#xC124;&#xCE58;">node.js &#xC124;&#xCE58;</h2>
+<pre><code>$ brew install node
+</code></pre><h2 id="appium-&#xC124;&#xCE58;">Appium &#xC124;&#xCE58;</h2>
+<pre><code>$ npm i -g appium
+</code></pre><h2 id="appium-client-&#xC124;&#xCE58;">Appium Client &#xC124;&#xCE58;</h2>
+<pre><code>$ npm i wd
+</code></pre><h2 id="appium-doctor-&#xC124;&#xCE58;">Appium-Doctor &#xC124;&#xCE58;</h2>
+<pre><code>$ npm i -g appium-doctor
+</code></pre><h3 id="carthage-&#xC124;&#xCE58;">Carthage &#xC124;&#xCE58;</h3>
+<blockquote>
+<pre><code>$ brew install carthage
+</code></pre></blockquote>
+<h3 id="ffmpeg-&#xC124;&#xCE58;">ffmpeg &#xC124;&#xCE58;</h3>
+<blockquote>
+<pre><code>$ brew install ffmpeg
+</code></pre></blockquote>
+<h3 id="mjpeg-consumer-&#xC124;&#xCE58;">mjpeg-consumer &#xC124;&#xCE58;</h3>
+<blockquote>
+<pre><code>$ npm i -g mjpeg-consumer
+</code></pre></blockquote>
+<h3 id="set-simulator-location-&#xC124;&#xCE58;">set-simulator-location &#xC124;&#xCE58;</h3>
+<blockquote>
+<pre><code>$ brew install lyft/formulae/set-simulator-location
+</code></pre></blockquote>
+<h3 id="applesimutils-&#xC124;&#xCE58;">applesimutils &#xC124;&#xCE58;</h3>
+<blockquote>
+<pre><code>$ brew tap wix/brew &amp;&amp; brew install applesimutils
+</code></pre></blockquote>
+<h3 id="ios-deploy-&#xC124;&#xCE58;">ios-deploy &#xC124;&#xCE58;</h3>
+<blockquote>
+<pre><code>$ npm install -g ios-deploy
+$ sudo gem install xcpretty
+</code></pre></blockquote>
+<h3 id="gst-launch-10-and-gst-inspect-10-&#xC124;&#xCE58;">gst-launch-1.0 and gst-inspect-1.0 &#xC124;&#xCE58;</h3>
+<blockquote>
+<pre><code>$ brew install gstreamer gst-plugins-base gst-plugins-good gst-plugins-bad gst-plugins-ugly gst-libav
+</code></pre></blockquote>
+<h3 id="opencv4nodejs-&#xC124;&#xCE58;">opencv4nodejs &#xC124;&#xCE58;</h3>
+<blockquote>
+<pre><code>$ brew install cmake &amp;&amp; npm install -g opencv4nodejs --ignore-scripts
+</code></pre></blockquote>
+<h3 id="idb--idbcompanion-&#xC124;&#xCE58;">idb &amp; idb_companion &#xC124;&#xCE58;</h3>
+<blockquote>
+<pre><code>$ brew tap facebook/fb &amp;&amp; brew install fbsimctl -- HEAD
+$ brew tap facebook/fb &amp;&amp; brew install idb
+$ sudo pip3.10 install fb-idb
+</code></pre></blockquote>
+<h3 id="bundletooljar-&#xC124;&#xCE58;">bundletool.jar &#xC124;&#xCE58;</h3>
+<blockquote>
+<p>&#xD3F4;&#xB354; &#xC0DD;&#xC131;</p>
+<pre><code>$ mkdir `~/Library/Android/sdk/bundle-tool`
+</code></pre><p>&#xC0DD;&#xC131;&#xD55C; &#xD3F4;&#xB354;&#xB85C; <strong>bundletool.jar</strong> &#xB2E4;&#xC6B4;&#xB85C;&#xB4DC; (<a href="https://github.com/google/bundletool/releases" target="_blank">https://github.com/google/bundletool/releases</a>)</p>
+<p>&#xAD8C;&#xD55C; &#xCD94;&#xAC00;</p>
+<pre><code>$ chmod +x bundletool.jar
+</code></pre></blockquote>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../" class="navigation navigation-prev " aria-label="Previous page: Profile">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="appium-setup-on-windows.html" class="navigation navigation-next " aria-label="Next page: Appium SetUp (On Windows)">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Appium SetUp (On MacOS)","level":"2.1","depth":1,"next":{"title":"Appium SetUp (On Windows)","level":"2.2","depth":1,"path":"automation/appium-setup-on-windows.md","ref":"automation/appium-setup-on-windows.md","articles":[]},"previous":{"title":"Profile","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"automation/appium-setup-on-macos.md","mtime":"2022-01-18T14:43:54.724Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-01-18T14:57:12.433Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
